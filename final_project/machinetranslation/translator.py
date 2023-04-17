@@ -9,9 +9,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-APIKEY='iuXXelXUFt-7ICyoxq434BrneQuVLtx_Z2p0ObLULLjs'
-URL='https://api.au-syd.language-translator.watson.cloud.ibm.com/'\
-    'instances/63fe1554-b07f-4d73-86d3-5a10970e13f6'
+APIKEY = os.environ['APIKEY']
+URL = os.environ['URL']
 
 authenticator = IAMAuthenticator(APIKEY)
 language_translator = LanguageTranslatorV3(
